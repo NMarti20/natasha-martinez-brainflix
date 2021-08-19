@@ -1,15 +1,16 @@
 import React from "react";
-import BrainflixLogo from "../assets/images/logo/Logo-brainflix.svg";
-import SearchIcon from "../assets/images/icons/Icon-search.svg";
-import UploadIcon from "../assets/images/icons/Icon-upload.svg";
-import ProfileImg from "../assets/images/Mohan-muruge.jpg";
+import HeaderScss from "./_header.scss";
+import BrainflixLogo from "../../assets/images/logo/Logo-brainflix.svg";
+import SearchIcon from "../../assets/images/icons/Icon-search.svg";
+import UploadIcon from "../../assets/images/icons/Icon-upload.svg";
+import ProfileImg from "../../assets/images/Mohan-muruge.jpg";
 
 const Header = () => (
   <header className="header">
     <nav className="nav">
-      <a className="nav__logo-link">
-        <img className="nav__logo" src={BrainflixLogo} alt="brainflix logo" />
-      </a>
+      {/* <a href="" className="nav__logo-link"> */}
+      <img className="nav__logo" src={BrainflixLogo} alt="brainflix logo" />
+      {/* </a> */}
 
       <div className="nav__container">
         <div className="nav__search">
@@ -32,11 +33,12 @@ const Header = () => (
           <button type="button" className="nav__btn">
             Upload
           </button>
+
           <input
             className="nav__upload-icon"
             type="image"
             alt="upload-icon"
-            src={SearchIcon}
+            src={UploadIcon}
             name="upload-icon"
           ></input>
         </div>
