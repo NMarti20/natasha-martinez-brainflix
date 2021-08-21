@@ -11,7 +11,6 @@
     border-radius: 50%;
     border: 0;
     margin-top: 1rem;
-
     margin-right: 1rem;
   }
 
@@ -23,13 +22,13 @@
   &__name-date-container {
     display: flex;
     justify-content: space-between;
+    font-size: 14px;
   }
 
   &__user-name {
-    margin: 0;
+    font-weight: 600;
   }
-}
-
-hr {
-  margin: 0 1rem;
+  &__user-comment {
+    font-size: 14px;
+  }
 }

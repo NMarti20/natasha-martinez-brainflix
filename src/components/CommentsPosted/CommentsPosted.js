@@ -10,10 +10,12 @@ export default function CommentsPosted({ commentsData }) {
 
       <div className="commentsPosted__container">
         <div className="commentsPosted__name-date-container">
-          <p className="user-name">{commentsData.name}</p>
-          <p className="date-posted">{formattedDate(commentsData.timestamp)}</p>
+          <p className="commentsPosted__user-name">{commentsData.name}</p>
+          <p className="commentsPosted__date-posted">
+            {formattedDate(commentsData.timestamp)}
+          </p>
         </div>
-        <p className="user-comment">{commentsData.comment}</p>
+        <p className="commentsPosted__user-comment">{commentsData.comment}</p>
       </div>
 
       {/* <hr></hr> */}
