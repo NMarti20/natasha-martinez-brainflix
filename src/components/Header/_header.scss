@@ -1,3 +1,60 @@
+@use '../../styles/partials/fonts' as *;
+
+.nav {
+  display: flex;
+  flex-direction: column;
+
+  &__logo {
+    margin: auto;
+    padding: 1rem 0 1rem 0;
+    height: 1.5rem;
+  }
+
+  &__search-bar {
+    font-family: Avenir Next;
+    font-weight: bold;
+    background-image: url("../../assets/images/icons/Icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: 1.3rem 0.9rem;
+    text-indent: 3rem;
+    width: 17.5rem;
+    height: 2.7rem;
+    border-color: #e1e1e1;
+    border-style: solid;
+    border-radius: 4px;
+    border-width: 1px;
+    margin: 0 1rem 0 1rem;
+  }
+
+  &__upload-and-img-container {
+    display: flex;
+    margin: 0.5rem 1rem 1rem 1rem;
+  }
+
+  &__btn {
+    font-family: Avenir Next;
+    font-weight: bold;
+    font-size: 1rem;
+    background-image: url("../../assets/images/icons/Icon-upload.svg");
+    background-color: #0095ff;
+    background-repeat: no-repeat;
+    background-position: 3.5rem 1rem;
+    border-style: hidden;
+    color: #fff;
+    width: 13.8rem;
+    height: 2.8rem;
+    border-radius: 4px;
+    text-indent: 1rem;
+  }
+
+  &__profile-img {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+  }
+}
+
 .nav__upload-icon {
   background-color: black;
 }

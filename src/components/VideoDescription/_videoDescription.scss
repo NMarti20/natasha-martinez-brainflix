@@ -1,0 +1,62 @@
+.video {
+  margin: 0 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-family: Avenir Next;
+    font-size: 1.5rem;
+    margin: 1rem 0 0 0;
+  }
+  &__details {
+    display: flex;
+    flex-direction: column;
+    border-bottom: black;
+  }
+
+  &__small-details-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__channel-date {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__channel {
+    margin-right: 0.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  &__date {
+    margin-bottom: 0.5rem;
+    color: #afafaf;
+    font-size: 0.9rem;
+    padding-top: 0.25rem;
+  }
+
+  &__views-likes {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.85rem;
+  }
+
+  &__views-icon {
+    margin-right: 0.5rem;
+    font-size: 0.85rem;
+  }
+  &__views {
+    margin-right: 1rem;
+    font-size: 0.85rem;
+  }
+
+  &__description {
+    font-size: 0.813rem;
+    margin-right: 0.6rem;
+  }
+}
+
+hr {
+  margin: 0.5rem 0 1rem 0;
+}

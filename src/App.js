@@ -1,12 +1,27 @@
 import "./styles/App.scss";
 import Header from "./components/Header/Header";
+import MainVideo from "./components/MainVideo/MainVideo";
+import VideoDescription from "./components/VideoDescription/VideoDescription";
+import videoDetails from "./data/video-details.json";
+import asideVideos from "./data/videos.json";
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <Header />
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    mainVideo: videoDetails[0],
+    videoDetails: videoDetails,
+    videos: asideVideos,
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <MainVideo mainVideo={this.state.mainVideo} />
+        <VideoDescription videoDesc={this.state.mainVideo} />
+      </div>
+    );
+  }
 }
 
 export default App;
