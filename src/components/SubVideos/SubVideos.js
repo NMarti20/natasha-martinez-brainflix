@@ -18,15 +18,17 @@ export default function SubVideos({ subVids, selectedVideo }) {
                 selectedVideo(subVid.id);
               }}
             >
-              <img
-                className="subVideos__img"
-                src={subVid.image}
-                alt="video images"
-              ></img>
+              <div className="subVideos__img-container">
+                <img
+                  className="subVideos__img"
+                  src={subVid.image}
+                  alt="video images"
+                ></img>
+              </div>
 
               <div className="subVideos__info-container">
-                <p className="subVideos__title">{subVid.title}</p>
-                <p className="subVideos__channel">{subVid.channel}</p>
+                <p className="subVideos__info-title">{subVid.title}</p>
+                <p className="subVideos__info-channel">{subVid.channel}</p>
               </div>
             </div>
           );
