@@ -7,17 +7,16 @@
   &__logo {
     margin: auto;
     padding: 1rem 0 1rem 0;
-    height: 1.5rem;
   }
 
   &__search-bar {
     font-family: Avenir Next;
-    font-weight: bold;
+    font-weight: 600;
     background-image: url("../../assets/images/icons/Icon-search.svg");
     background-repeat: no-repeat;
     background-position: 1.3rem 0.9rem;
     text-indent: 3rem;
-    width: 17.5rem;
+    width: 18rem;
     height: 2.7rem;
     border-color: #e1e1e1;
     border-style: solid;
@@ -28,12 +27,11 @@
 
   &__upload-and-img-container {
     display: flex;
-    margin: 0.5rem 1rem 1rem 1rem;
+    margin: 0.5rem 1rem 1rem 0.5rem;
   }
 
   &__btn {
-    font-family: Avenir Next;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1rem;
     background-image: url("../../assets/images/icons/Icon-upload.svg");
     background-color: #0095ff;
@@ -45,6 +43,7 @@
     height: 2.8rem;
     border-radius: 4px;
     text-indent: 1rem;
+    margin-left: 0.5rem;
   }
 
   &__profile-img {

@@ -32,7 +32,7 @@ export default function VideoDescription({ videoDesc }) {
           </div>
         </div>
       </div>
-      <hr></hr>
+
       <div className="video__description">{videoDesc.description}</div>
     </section>
   );

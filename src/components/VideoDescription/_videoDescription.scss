@@ -11,7 +11,7 @@
   &__details {
     display: flex;
     flex-direction: column;
-    border-bottom: black;
+    border-bottom: 1px solid #efefef;
   }
 
   &__small-details-container {
@@ -22,6 +22,7 @@
   &__channel-date {
     display: flex;
     flex-direction: row;
+    margin: 0.75rem 0 0 0;
   }
 
   &__channel {
@@ -33,13 +34,14 @@
     margin-bottom: 0.5rem;
     color: #afafaf;
     font-size: 0.9rem;
-    padding-top: 0.25rem;
+    padding-top: 0.15rem;
   }
 
   &__views-likes {
     display: flex;
     flex-direction: row;
     font-size: 0.85rem;
+    margin: 1rem 1rem 1rem 0;
   }
 
   &__views-icon {
@@ -54,9 +56,6 @@
   &__description {
     font-size: 0.813rem;
     margin-right: 0.6rem;
+    margin-top: 1rem;
   }
-}
-
-hr {
-  margin: 0.5rem 0 1rem 0;
 }

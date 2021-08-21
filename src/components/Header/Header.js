@@ -6,11 +6,7 @@ import ProfileImg from "../../assets/images/Mohan-muruge.jpg";
 const Header = () => (
   <header className="header">
     <nav className="nav">
-      {/* <a href="" className="nav__logo-link"> */}
       <img className="nav__logo" src={BrainflixLogo} alt="brainflix logo" />
-      {/* </a> */}
-
-      {/* <h1>HELOO WORK</h1> */}
 
       <div className="nav__container">
         <input

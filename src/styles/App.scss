@@ -2,9 +2,11 @@
 @use './partials/fonts' as *;
 @use './partials/reset' as *;
 @use './partials/variables' as *;
-@use '../components/Header/header' as *;
-@use '../components/MainVideo/mainVideo' as *;
-
+// @use '../components/Header/header' as *;
+// @use '../components/Header/header' as *;
+// @use '../components/MainVideo/mainVideo' as *;
+// @use '../components/Comments/comments' as *;
+// @use '../components/CommentsPosted/commentsPosted' as *;
 body {
   padding: 0;
   margin: 0;
