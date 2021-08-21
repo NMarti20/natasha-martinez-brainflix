@@ -3,7 +3,7 @@ import "./_subVideos.scss";
 
 // import { v4 as uuid } from "uuid";
 
-export default function SubVideos({ subVids }) {
+export default function SubVideos({ subVids, selectedVideo }) {
   return (
     <section className="subVideos">
       <h2 className="subVideos__header">NEXT VIDEO</h2>
@@ -15,7 +15,7 @@ export default function SubVideos({ subVids }) {
               className="subVideos__img-info-container"
               key={subVid.id}
               onClick={() => {
-                subVids.clickHandler(subVid.id);
+                selectedVideo(subVid.id);
               }}
             >
               <img
