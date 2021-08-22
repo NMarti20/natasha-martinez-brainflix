@@ -7,12 +7,21 @@
     height: 50.5vw;
   }
 
+  @include desktop {
+    height: 39.1vw;
+  }
+
   &__video {
     width: 100vw;
 
     @include tablet {
       width: 90vw;
       margin: 0 5vw;
+    }
+
+    @include desktop {
+      width: 70vw;
+      margin: 0 15vw;
     }
   }
 }
