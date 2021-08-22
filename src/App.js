@@ -39,7 +39,7 @@ class App extends React.Component {
         <Header />
         <MainVideo mainVideo={this.state.mainVideo} />
 
-        <div className="App__main-container">
+        <section className="App__main-container">
           <div className="App__desc-comments">
             <VideoDescription videoDesc={this.state.mainVideo} />
 
@@ -54,7 +54,7 @@ class App extends React.Component {
               selectedVideo={this.handleSelectedVideo}
             />
           </div>
-        </div>
+        </section>
       </div>
     );
   }
