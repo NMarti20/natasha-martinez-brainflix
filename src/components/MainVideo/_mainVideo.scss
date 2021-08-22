@@ -1,5 +1,18 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
 .main {
+  @include tablet {
+    background-color: black;
+    height: 50.5vw;
+  }
+
   &__video {
     width: 100vw;
+
+    @include tablet {
+      width: 90vw;
+      margin: 0 5vw;
+    }
   }
 }
