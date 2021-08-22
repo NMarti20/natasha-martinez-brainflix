@@ -7,6 +7,10 @@
   border-bottom-color: #e1e1e1;
   display: flex;
 
+  @include desktop {
+    border-bottom: none;
+  }
+
   &__pic-container {
     height: 40px;
     width: 40px;

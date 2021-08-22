@@ -1,8 +1,9 @@
-@use './partials/mixins' as *;
+// @use './partials/mixins' as *;
 @use './partials/fonts' as *;
 @use './partials/reset' as *;
-@use './partials/variables' as *;
-// @use '../components/Header/header' as *;
+@import "./partials/variables";
+@import "./partials/mixins";
+@import "../index.scss";
 // @use '../components/Header/header' as *;
 // @use '../components/MainVideo/mainVideo' as *;
 // @use '../components/Comments/comments' as *;
@@ -12,4 +13,25 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: Avenir Next;
+}
+
+.App {
+  &__main-container {
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__desc-comments {
+    @include desktop {
+      margin-left: 7rem;
+    }
+  }
+
+  &__subVideos {
+    @include desktop {
+      margin-right: 9rem;
+    }
+  }
 }

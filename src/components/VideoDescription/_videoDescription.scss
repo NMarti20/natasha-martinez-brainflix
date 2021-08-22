@@ -20,6 +20,9 @@
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid #efefef;
+    @include desktop {
+      border-bottom: none;
+    }
   }
 
   &__small-details-container {

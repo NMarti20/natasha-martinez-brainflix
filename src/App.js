@@ -38,16 +38,23 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <MainVideo mainVideo={this.state.mainVideo} />
-        <VideoDescription videoDesc={this.state.mainVideo} />
 
-        <Comments />
+        <div className="App__main-container">
+          <div className="App__desc-comments">
+            <VideoDescription videoDesc={this.state.mainVideo} />
 
-        {commentsMap}
+            <Comments />
 
-        <SubVideos
-          subVids={filteredVideos}
-          selectedVideo={this.handleSelectedVideo}
-        />
+            {commentsMap}
+          </div>
+
+          <div className="App__subVideos">
+            <SubVideos
+              subVids={filteredVideos}
+              selectedVideo={this.handleSelectedVideo}
+            />
+          </div>
+        </div>
       </div>
     );
   }
