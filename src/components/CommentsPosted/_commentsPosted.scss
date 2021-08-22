@@ -1,3 +1,6 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
 .commentsPosted {
   border-bottom: 1px solid black;
   margin: 0 1rem;
@@ -24,9 +27,16 @@
     justify-content: space-between;
     font-size: 14px;
     margin: 1.5rem 0 0.5rem 0;
+    @include tablet {
+      display: flex;
+      justify-content: start;
+    }
   }
   &__date-posted {
     color: #afafaa;
+    @include tablet {
+      margin-left: 1rem;
+    }
   }
   &__user-name {
     font-weight: 600;
