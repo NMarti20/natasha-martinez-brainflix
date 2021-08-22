@@ -1,11 +1,15 @@
 import React from "react";
 import "./_comments.scss";
 import userPhoto from "../../assets/images/Mohan-muruge.jpg";
+import videoCommentsAmt from "../../data/video-details.json";
 
-function Comments(props) {
+function Comments() {
   return (
     <section className="comments">
-      <h2 className="comments__title">3 Comments</h2>
+      <h2 className="comments__title">
+        {videoCommentsAmt[0].comments.length} Comments
+      </h2>
+
       <div className="comments__insert">
         <img
           className="comments__img"
