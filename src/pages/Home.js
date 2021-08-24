@@ -6,7 +6,6 @@ import Comments from "../components/Comments/Comments";
 import CommentsPosted from "../components/CommentsPosted/CommentsPosted";
 import SubVideos from "../components/SubVideos/SubVideos";
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Component } from "react";
 
 export default class Home extends Component {
