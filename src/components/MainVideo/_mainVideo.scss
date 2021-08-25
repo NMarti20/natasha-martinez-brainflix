@@ -4,11 +4,12 @@
 .main {
   @include tablet {
     background-color: black;
-    max-height: 50.5vw;
+    // max-height: 50.5vw;
   }
 
   @include desktop {
-    max-height: 39.1vw;
+    // height: 39.1vw;
+    max-width: 78rem;
   }
 
   &__video {

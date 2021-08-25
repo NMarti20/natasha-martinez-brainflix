@@ -1,14 +1,14 @@
 import MainVideo from "../components/MainVideo/MainVideo";
 import VideoDescription from "../components/VideoDescription/VideoDescription";
-import videoDetails from "../data/video-details.json";
-import SideVideos from "../data/videos.json";
 import Comments from "../components/Comments/Comments";
 import CommentsPosted from "../components/CommentsPosted/CommentsPosted";
 import SubVideos from "../components/SubVideos/SubVideos";
 import React from "react";
 import { Component } from "react";
+import videoDetails from "../data/video-details.json";
+import SideVideos from "../data/videos.json";
 
-export default class Home extends Component {
+export default class Home extends React.Component {
   state = {
     mainVideo: videoDetails[0],
     videoDetails: videoDetails,

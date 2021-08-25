@@ -23,7 +23,6 @@ const Header = () => (
           <Link to="/upload">
             <div className="nav__upload">
               <button type="button" className="nav__btn">
-                <img className="nav__upload-fake" src={Upload} alt=""></img>
                 UPLOAD
               </button>
             </div>
