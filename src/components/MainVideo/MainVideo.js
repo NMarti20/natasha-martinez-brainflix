@@ -1,5 +1,5 @@
 import React from "react";
-import mainVideo from "./_mainVideo.scss";
+import "./_mainVideo.scss";
 
 // import { v4 as uuid } from "uuid";
 

@@ -7,22 +7,17 @@ import Upload from "./pages/Upload";
 // import videoDetails from "./data/video-details.json";
 // import SideVideos from "./data/videos.json";
 
-export default class App extends React.Component {
-  // state = {
-  //   mainVideo: videoDetails[0],
-  //   videoDetails: videoDetails,
-  //   videos: SideVideos,
-  // };
-
-  render() {
-    return (
-      <Router>
-        <Header />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/upload" component={Upload} />
-        </Switch>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/upload" component={Upload} />
+        <Route path="/videos/:id" component={Home} />
+      </Switch>
+    </Router>
+  );
 }
+
+export default App;

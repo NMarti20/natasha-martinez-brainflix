@@ -1,4 +1,5 @@
 import React from "react";
+import './_upload.scss';
 
 export default function Upload() {
   return (

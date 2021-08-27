@@ -1,5 +1,6 @@
 import React from "react";
 import "./_subVideos.scss";
+import { Link } from "react-router-dom";
 
 // import { v4 as uuid } from "uuid";
 
@@ -11,12 +12,10 @@ export default function SubVideos({ subVids, selectedVideo }) {
       <div className="subVideos__videos">
         {subVids.map((subVid) => {
           return (
-            <div
+            <Link
+              to={`/videos/${subVid.id}`}
               className="subVideos__img-info-container"
               key={subVid.id}
-              onClick={() => {
-                selectedVideo(subVid.id);
-              }}
             >
               <div className="subVideos__img-container">
                 <img
@@ -30,7 +29,7 @@ export default function SubVideos({ subVids, selectedVideo }) {
                 <p className="subVideos__info-title">{subVid.title}</p>
                 <p className="subVideos__info-channel">{subVid.channel}</p>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
