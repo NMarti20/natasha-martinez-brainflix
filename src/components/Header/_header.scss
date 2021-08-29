@@ -26,6 +26,10 @@
       margin-left: 9rem;
     }
   }
+
+  &__logo-link {
+    margin: auto;
+  }
   &__container {
     @include tablet {
       display: flex;

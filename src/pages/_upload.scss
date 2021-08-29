@@ -1,0 +1,159 @@
+@import "../styles/partials/mixins";
+@import "../styles/partials/variables";
+
+.upload {
+  @include tablet {
+    border-top: 1px solid #efefef;
+  }
+
+  &__title {
+    font-size: 1.55rem;
+    margin: 1.5rem 1rem 1.2rem 1rem;
+
+    @include tablet {
+      font-size: 2.5rem;
+      padding: 0.5rem 0 1.5rem 0;
+      border-bottom: 1px solid #efefef;
+    }
+
+    @include desktop {
+      margin: 1.5rem 9rem 1.2rem 9rem;
+    }
+  }
+  &__title-input {
+    border: 1px solid #efefef;
+    height: 2.5rem;
+    margin: 0 1rem 0 0;
+    border-radius: 4px;
+    text-indent: 1rem;
+    font-size: 0.813rem;
+    @include desktop {
+      width: 39rem;
+    }
+  }
+
+  &__video-thumbnail {
+    margin: 1rem 0 0 1rem;
+  }
+  &__header {
+    font-size: 12px;
+    color: #afafaf;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  &__video {
+    height: 9.563rem;
+    width: 18rem;
+    border-radius: 4px;
+
+    @include tablet {
+      height: 11.438rem;
+      width: 21.5rem;
+    }
+  }
+
+  &__form {
+    margin: 1rem 0 0 1rem;
+  }
+  &__title-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title-label {
+    font-size: 12px;
+    color: #afafaf;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__dec-cont {
+    display: flex;
+    flex-direction: column;
+  }
+  &__desc-label {
+    font-size: 12px;
+    color: #afafaf;
+    font-weight: 600;
+    margin: 1rem 0 0.5rem 0;
+  }
+  &__desc {
+    border: 1px solid #efefef;
+    height: 8rem;
+    font-family: Avenir Next;
+    resize: none;
+    margin: 0 1rem 0 0;
+    text-indent: 1rem;
+
+    @include desktop {
+      width: 39rem;
+    }
+  }
+
+  &__desc::placeholder {
+    padding: 0.8rem 0 0 0;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 0 0 1rem;
+
+    @include tablet {
+      border-top: 1px solid #efefef;
+      margin: 2rem 1rem 2rem 1rem;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    @include desktop {
+      margin: 2rem 9.2rem 2rem 9rem;
+    }
+  }
+
+  &__publish-btn {
+    background-color: #0095ff;
+    background-repeat: no-repeat;
+    background-position: 3.5rem 1rem;
+    border-style: hidden;
+    color: #fff;
+    width: 18rem;
+    height: 2.8rem;
+    border-radius: 4px;
+    text-indent: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    @include tablet {
+      margin: 2.2rem 0 0 0;
+      width: 10rem;
+      text-indent: 0;
+    }
+  }
+
+  &__cancel-btn {
+    margin: 1rem 0 1rem 0;
+    color: #0095ff;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    border-style: hidden;
+    width: 18rem;
+    height: 2.8rem;
+    border-radius: 4px;
+    text-indent: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    @include tablet {
+      margin: 2.2rem 0 0 0;
+      width: 10rem;
+      text-indent: 0;
+    }
+  }
+
+  &__body-cont {
+    @include desktop {
+      display: flex;
+      margin: 0 0 0 8.5rem;
+    }
+  }
+}

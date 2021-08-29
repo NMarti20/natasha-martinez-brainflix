@@ -5,7 +5,7 @@ export default function CommentsPosted({ commentsData }) {
   return (
     <section className="commentsPosted">
       <div className="commentsPosted__pic-container">
-        <img className="commentsPosted__user-img"></img>
+        <img className="commentsPosted__user-img" alt=""></img>
       </div>
 
       <div className="commentsPosted__container">
@@ -17,8 +17,6 @@ export default function CommentsPosted({ commentsData }) {
         </div>
         <p className="commentsPosted__user-comment">{commentsData.comment}</p>
       </div>
-
-      {/* <hr></hr> */}
     </section>
   );
 }
