@@ -15,7 +15,7 @@ export default class Home extends React.Component {
   };
 
   getVideo = (id) => {
-    axios.get(baseURL + "/videos/" + id + APIkey).then((response) => {
+    axios.get(`${baseURL}/videos/${id}`).then((response) => {
       this.setState({
         videoDetails: response.data,
       });
@@ -23,7 +23,8 @@ export default class Home extends React.Component {
   };
 
   componentDidMount() {
-    axios.get(baseURL + "/videos" + APIkey).then((response) => {
+    axios.get(`${baseURL}/videos`).then((response) => {
+      // console.log("RESPONSE DATA:", response.data);
       this.setState({
         videos: response.data,
       });
@@ -40,7 +41,7 @@ export default class Home extends React.Component {
 
   render() {
     if (!this.state.videoDetails) {
-      return <p>Video not found.</p>;
+      return <p>Loading video . . . </p>;
     }
 
     const filteredVideos = this.state.videos.filter(

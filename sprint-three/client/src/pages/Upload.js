@@ -2,8 +2,49 @@ import React from "react";
 import UploadVidImg from "../assets/images/Upload-video-preview.jpg";
 import "./_upload.scss";
 import { Link } from "react-router-dom";
+import { baseURL } from "../Utils/utils";
+import axios from "axios";
+import { createRef } from "react";
 
-export default function Upload() {
+// import uniqueID from "uniqid";
+
+const formRef = createRef();
+
+export default function Upload(props) {
+  const handleSubmit = (event) => {
+    //need to add axios post to insert title, desc, and picture
+
+    event.preventDefault();
+
+    // const form = event.target;
+
+    const title = formRef.current.title.value;
+    const description = formRef.current.description.value;
+
+    axios
+      .post(`${baseURL}/videos`, {
+        title: title,
+        channel: "NBA daily",
+        image: "http://localhost:8080/images/image3.jpeg",
+        description: description,
+        views: "15,000,000",
+        likes: "1,000,000",
+        duration: "10:00",
+        video: "",
+        timestamp: Date.now(),
+        comments: [],
+      })
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    alert("Video uploaded");
+
+    props.history.push("/");
+  };
+
   return (
     <>
       <section className="upload">
@@ -15,10 +56,13 @@ export default function Upload() {
             <p className="upload__header">VIDEO THUMBNAIL</p>
             <img className="upload__video" src={UploadVidImg} alt=""></img>
           </div>
-          <form className="upload__form">
+          <form className="upload__form" ref={formRef}>
             <div className="upload__title-cont">
               <label className="upload__title-label">TITLE YOUR VIDEO</label>
               <input
+                // form="uploadForm"
+                name="title"
+                type="text"
                 className="upload__title-input"
                 placeholder="Add a title to your video"
               ></input>
@@ -28,6 +72,9 @@ export default function Upload() {
                 ADD A VIDEO DESCRIPTION
               </label>
               <textarea
+                // form="uploadForm"
+                name="description"
+                type="text"
                 className="upload__desc"
                 placeholder="Add a description of your video"
               ></textarea>
@@ -39,9 +86,7 @@ export default function Upload() {
           <Link to="/">
             {" "}
             <button
-              onClick={() => {
-                alert("You are uploading a video");
-              }}
+              onClick={handleSubmit}
               type="button"
               className="upload__publish-btn"
             >

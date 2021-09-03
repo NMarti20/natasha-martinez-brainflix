@@ -10,6 +10,11 @@ const videosFile = () => {
   return parsedFileContent;
 };
 
+// const stringVideosFile = (info) => {
+//   const stringifyVideos = JSON.stringify(info);
+//   fs.writeFileSync("./data/videos.json", stringifyVideos);
+// };
+
 router.get("/", (_req, res) => {
   try {
     return res.status(200).json(videosFile());
@@ -24,18 +29,20 @@ router.get("/:id", (req, res) => {
   const getVideo = video.find((video) => video.id === req.params.id);
 
   if (!getVideo) {
-    return res.status(404).send("Video not found");
+    return res.status(500).send("Video not found");
   }
   res.json(getVideo);
 });
 
 router.post("/", (req, res) => {
+  const inputVideo = videosFile();
+
   const newVideo = {
     id: uniqueID(),
-    title: "",
+    title: req.body.title,
     channel: "NBA daily",
-    image: "image",
-    description: "",
+    image: "http://localhost:8080/images/image3.jpeg",
+    description: req.body.description,
     views: "15,000,000",
     likes: "1,000,000",
     duration: "10:00",
@@ -43,7 +50,12 @@ router.post("/", (req, res) => {
     timestamp: Date.now(),
     comments: [],
   };
-  res.json(newVideo);
+
+  inputVideo.push(newVideo);
+
+  fs.writeFileSync("./data/video-details.json", JSON.stringify(inputVideo));
+
+  return res.status(201).json(newVideo);
 });
 
 module.exports = router;

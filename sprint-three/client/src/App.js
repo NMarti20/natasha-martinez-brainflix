@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/upload" component={Upload} />
+        <Route exact path="/upload" render={(props) => <Upload {...props} />} />
         <Route path="/videos/:id" component={Home} />
       </Switch>
     </Router>
@@ -21,3 +21,5 @@ function App() {
 }
 
 export default App;
+
+// component={Upload}

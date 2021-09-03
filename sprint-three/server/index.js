@@ -1,12 +1,13 @@
 const express = require("express");
-// const cors = require("cors");
+const cors = require("cors");
 const app = express();
 const videos = require("./routes/videos");
-// const comments = require("./routes/comments");
 
 app.use(express.json());
 
-// app.use(express.static('assets'));
+app.use(express.static("public"));
+// app.use(express.static('./public/images/assets'));
+app.use(cors());
 
 app.use((_req, res, next) => {
   console.log("Incoming request");
