@@ -1,6 +1,7 @@
 import "./_videoDescription.scss";
 import ViewsIcon from "../../assets/images/icons/Icon-views.svg";
 import LikesIcon from "../../assets/images/icons/Icon-likes.svg";
+import { formattedDate } from '../../Utils/utils';
 
 import React from "react";
 
@@ -38,14 +39,4 @@ export default function VideoDescription({ videoDesc }) {
   );
 }
 
-// convert to date
 
-function formattedDate(timeDate) {
-  const dateObj = new Date(timeDate);
-
-  const month = dateObj.getMonth() + 1;
-  const date = dateObj.getDate();
-  const year = dateObj.getFullYear();
-
-  return +month + "/" + date + "/" + year;
-}

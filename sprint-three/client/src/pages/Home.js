@@ -19,18 +19,21 @@ export default class Home extends React.Component {
       this.setState({
         videoDetails: response.data,
       });
-    });
+    }).catch((err) => {
+      console.log(err);
+    });;
   };
 
   componentDidMount() {
     axios.get(`${baseURL}/videos`).then((response) => {
-      // console.log("RESPONSE DATA:", response.data);
       this.setState({
         videos: response.data,
       });
 
       this.getVideo(response.data[0].id);
-    });
+    }).catch((err) => {
+      console.log(err);
+    });;
   }
 
   componentDidUpdate(prevProps) {

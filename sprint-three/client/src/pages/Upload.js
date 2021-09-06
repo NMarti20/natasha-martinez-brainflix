@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { baseURL } from "../Utils/utils";
 import axios from "axios";
 import { createRef } from "react";
+// import { ToastsContainer, ToastsStore } from 'react-toasts';
+import { toast } from 'toast-notification-alert';
 
 const formRef = createRef();
 
@@ -36,7 +38,7 @@ export default function Upload(props) {
       .post(`${baseURL}/videos`, {
         title: title,
         channel: "NBA daily",
-        image: "http://localhost:8080/images/image3.jpeg",
+        image: "http://localhost:8080/images/image8.jpeg",
         description: description,
         views: "15,000,000",
         likes: "1,000,000",
@@ -51,7 +53,9 @@ export default function Upload(props) {
       .catch((err) => {
         console.log(err);
       });
-    alert("Video uploaded");
+
+    toast.show({ title: 'Video Uploaded ', position: 'topright', type: 'info' })
+
 
     props.history.push("/");
   };
@@ -102,6 +106,7 @@ export default function Upload(props) {
             >
               PUBLISH
             </button>
+
           </Link>
           <button type="button" className="upload__cancel-btn">
             CANCEL

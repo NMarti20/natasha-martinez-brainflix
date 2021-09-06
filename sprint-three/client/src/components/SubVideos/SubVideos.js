@@ -14,6 +14,7 @@ export default function SubVideos({ subVids, selectedVideo }) {
           return (
             <Link
               to={`/videos/${subVid.id}`}
+              onClick={window.scrollTo(0, 0)}
               className="subVideos__img-info-container"
               key={subVid.id}
             >

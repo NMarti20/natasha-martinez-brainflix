@@ -10,11 +10,6 @@ const videosFile = () => {
   return parsedFileContent;
 };
 
-// const stringVideosFile = (info) => {
-//   const stringifyVideos = JSON.stringify(info);
-//   fs.writeFileSync("./data/videos.json", stringifyVideos);
-// };
-
 router.get("/", (_req, res) => {
   try {
     return res.status(200).json(videosFile());
