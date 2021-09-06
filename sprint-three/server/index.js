@@ -6,7 +6,6 @@ const videos = require("./routes/videos");
 app.use(express.json());
 
 app.use(express.static("public"));
-// app.use(express.static('./public/images/assets'));
 app.use(cors());
 
 app.use((_req, res, next) => {

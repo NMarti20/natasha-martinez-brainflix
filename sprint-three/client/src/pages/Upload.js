@@ -6,20 +6,31 @@ import { baseURL } from "../Utils/utils";
 import axios from "axios";
 import { createRef } from "react";
 
-// import uniqueID from "uniqid";
-
 const formRef = createRef();
 
 export default function Upload(props) {
   const handleSubmit = (event) => {
-    //need to add axios post to insert title, desc, and picture
 
     event.preventDefault();
 
-    // const form = event.target;
-
     const title = formRef.current.title.value;
     const description = formRef.current.description.value;
+
+    //validate errors, doesn't post while empty and reset when inputted
+    if (title === "") {
+      formRef.current.title.classList.add("comments__validate");
+      return false;
+    } else {
+      formRef.current.title.classList.remove("comments__validate");
+    }
+
+    if (description === "") {
+      formRef.current.description.classList.add("comments__validate");
+      return false;
+    } else {
+      formRef.current.description.classList.remove("comments__validate");
+    }
+
 
     axios
       .post(`${baseURL}/videos`, {
@@ -60,7 +71,6 @@ export default function Upload(props) {
             <div className="upload__title-cont">
               <label className="upload__title-label">TITLE YOUR VIDEO</label>
               <input
-                // form="uploadForm"
                 name="title"
                 type="text"
                 className="upload__title-input"
@@ -72,7 +82,7 @@ export default function Upload(props) {
                 ADD A VIDEO DESCRIPTION
               </label>
               <textarea
-                // form="uploadForm"
+
                 name="description"
                 type="text"
                 className="upload__desc"
