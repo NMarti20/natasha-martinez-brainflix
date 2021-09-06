@@ -29,6 +29,8 @@ router.get("/:id", (req, res) => {
   res.json(getVideo);
 });
 
+
+//when posting video
 router.post("/", (req, res) => {
   const inputVideo = videosFile();
 
